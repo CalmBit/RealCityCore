@@ -6,10 +6,14 @@ import org.bukkit.event.player.PlayerLoginEvent;
 
 public class PlayerLoginHandler implements Listener {
 	RealCityCore plugin;
-	@EventHandler
-	public void onPlayerLogin(PlayerLoginEvent event, RealCityCore plugin)
+	public PlayerLoginHandler(RealCityCore plugin)
 	{
 		this.plugin = plugin;
+		plugin.getServer().getPluginManager().registerEvents(this, plugin);
+	}
+	@EventHandler
+	public void normalLogin(PlayerLoginEvent event)
+	{
 		event.getPlayer().sendMessage(plugin.getConfig().getString("MOTD"));
 	}
 }
