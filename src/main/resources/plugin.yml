@@ -1,0 +1,29 @@
+name: RealCityCore
+main: io.github.calmbit.realcitycore.RealCityCore
+version: 0.0.1
+commands:
+  saveGenerators:
+    description: Saves all generators in the world.
+    usage: /saveGenerators
+    permission: realcitycore.admin.saveGenerators
+    permission-message: You don't have access to that command.
+  loadGenerators:
+    description: Loads all previously saved generator files.
+    usage: /loadGenerators
+    permission: realcitycore.admin.loadGenerators
+    permission-message: You don't have access to that command.
+  startGenerator:
+    description: Starts the generator specified by the first argument.
+    usage: /startGenerator [name]
+    permission: realcitycore.startGenerator
+    permission-message: You don't have access to that command.
+  setGenerator:
+    description: Designates a block to be a generator.
+    usage: /setGenerator [name]
+    permission: realcitycore.setGenerator
+    permission-message: You don't have access to that command.
+  removeGenerator:
+    description: Removes a block's generator status.
+    usage: /removeGenerator
+    permission: realcitycore.removeGenerator
+    permission-message: You don't have access to that command.
