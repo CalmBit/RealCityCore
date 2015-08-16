@@ -1,4 +1,5 @@
 language: java
 notifications:
   irc: "chat.freenode.net#punktcreative"
-  email: "EB5473@gmail.com"
+  email: 
+      - "EB5473@gmail.com"

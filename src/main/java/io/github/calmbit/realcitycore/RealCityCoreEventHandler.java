@@ -23,6 +23,7 @@ public class RealCityCoreEventHandler implements Listener {
 	@EventHandler
 	public void blockBreak(BlockBreakEvent event)
 	{
+		event.getPlayer().sendMessage("Testing statement!");
 		if(event.isCancelled()) return;
 		if(plugin.generators.containsValue(event.getBlock()))
 		{
