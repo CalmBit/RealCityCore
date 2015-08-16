@@ -8,11 +8,12 @@ import org.bukkit.event.player.PlayerLoginEvent;
 
 public class RealCityCoreEventHandler implements Listener {
 	RealCityCore plugin;
+	
 	public RealCityCoreEventHandler(RealCityCore plugin)
 	{
 		this.plugin = plugin;
-		plugin.getServer().getPluginManager().registerEvents(this, plugin);
 	}
+	
 	@EventHandler
 	public void normalLogin(PlayerLoginEvent event)
 	{

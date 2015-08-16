@@ -28,7 +28,7 @@ public final class RealCityCore extends JavaPlugin {
 				e.printStackTrace();
 			}
 		
-		new RealCityCoreEventHandler(this);
+		this.getServer().getPluginManager().registerEvents(new RealCityCoreEventHandler(this), this);
 		
 		getCommand("startGenerator").setExecutor(new RealCityCoreCommandExecutor(this));
 		getCommand("setGenerator").setExecutor(new RealCityCoreCommandExecutor(this));
