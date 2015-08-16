@@ -10,6 +10,8 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.material.Wool;
+import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class RealCityCoreCommandExecutor implements CommandExecutor {
@@ -98,8 +100,8 @@ public class RealCityCoreCommandExecutor implements CommandExecutor {
 			
 			pluginCity.generators.put(args[0],targetserial);
 			pluginCity.blockIDMap.put(args[0],target.getTypeId());
-			target.setTypeId(35);
-			target.setData((byte) 1);
+			target.setType(Material.WOOL);
+			target.setMetadata("color", new FixedMetadataValue(pluginCity, "orange"));
 			player.sendMessage("Generator " + args[0] + " created!");
 			return true;
 		}
